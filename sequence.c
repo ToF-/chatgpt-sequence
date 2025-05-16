@@ -1,15 +1,14 @@
 #include <stdio.h>
 
 void generer_sequence(int n) {
-    if (n < 1) return;
-    int a = 1, b = 1;
-    printf("△");
-    while (a <= n) {
-        a += b;
-        printf("%d△", a);
-        b++;
+    int valeur = 2;
+    int incr = 2;
+    while (valeur <= n) {
+        printf("△%d", valeur);
+        valeur += incr;
+        incr++;
     }
-    printf("\n");
+    printf("△\n");
 }
 
 int main() {
