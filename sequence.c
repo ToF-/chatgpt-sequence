@@ -1,14 +1,24 @@
 #include <stdio.h>
 
 void generer_sequence(int n) {
-    int valeur = 2;
+    if (n == 1) {
+        printf("△\n");
+        return;
+    }
+    if (n == 2) {
+        printf("2△\n");
+        return;
+    }
+
+    int valeur = 3;
     int incr = 2;
-    while (valeur <= n) {
-        printf("△%d", valeur);
+    printf("△3△");
+    while (valeur < n) {
         valeur += incr;
+        printf("%d△", valeur);
         incr++;
     }
-    printf("△\n");
+    printf("\n");
 }
 
 int main() {
